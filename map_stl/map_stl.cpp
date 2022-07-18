@@ -6,38 +6,34 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */ 
-    
+void make_dictionary(int number_of_elements)
+{
     map<string, int> m;
-    int N_elements;
-    cin >> N_elements;
-    
     string name;
     int marks_val;
     int marks_sum = 0;
     int value_in_map;
     int query_choice;
     map<string, int>::iterator itr;
-    for (int i = 0; i < N_elements; i++)
+    for (int i = 0; i < number_of_elements; i++)
     {
         cin >> query_choice;
         switch (query_choice) {
             
             case 1: 
                 cin >> name >> marks_val; 
-                itr = m.find(name);
-                if(itr != m.end())
+                itr = m.find(name);  // find an element in the map
+                if(itr != m.end())  // check the element is already present in the map
                 {
                     value_in_map = m[name];
                     marks_sum = marks_sum + value_in_map;
                     marks_sum = marks_sum + marks_val;
-                    m.erase(name);
-                    m.insert(make_pair(name, marks_sum));
+                    m.erase(name);         // delete the previous element
+                    m.insert(make_pair(name, marks_sum)); // add new updated element in the map
                 }
                 else 
                 {
-                    m.insert(make_pair(name, marks_val));
+                    m.insert(make_pair(name, marks_val));  // add new element in the map
                 }
                 
                 marks_sum = 0;
@@ -50,13 +46,20 @@ int main() {
                 
             case 3: 
                 cin >> name;
- //               for (int i = 0; i < m.size(); i++)
-                {
-                    cout << m[name] << endl;                
-                }
+                cout << m[name] << endl;                
                 break;
         }
     }
+
+}
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */ 
+    
+    int N_elements;
+    cin >> N_elements;
+
+    make_dictionary(N_elements);
     
     return 0;
 }
