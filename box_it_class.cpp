@@ -87,7 +87,6 @@ class Box
         }  
 };
 
-
 void check2()
 {
 	int n;
