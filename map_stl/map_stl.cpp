@@ -23,7 +23,7 @@ void make_dictionary(int number_of_elements)
             case 1: 
                 cin >> name >> marks_val; 
                 itr = m.find(name);  // find an element in the map
-                if(itr != m.end())  // check the element is already present in the map
+                if(itr != m.end())  // check the element, if it is already present in the map
                 {
                     value_in_map = m[name];
                     marks_sum = marks_sum + value_in_map;

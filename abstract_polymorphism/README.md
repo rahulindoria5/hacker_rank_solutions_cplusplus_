@@ -1,0 +1,16 @@
+sample input: 
+```
+3 1
+set 1 2
+get 1
+get 2
+```
+
+sample output:
+```
+2
+-1
+```
+
+
+

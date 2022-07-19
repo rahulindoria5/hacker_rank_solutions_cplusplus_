@@ -41,7 +41,15 @@ int main() {
                 
         }
         
-    }  
+    } 
+
+    // set<int>:: iterator it;
+    // for( it = s.begin(); it!=s.end(); ++it){
+    //     int ans = *it;
+    //     cout << "-> " << ans << endl;
+    // }
+                
+
     return 0;
 }
 
