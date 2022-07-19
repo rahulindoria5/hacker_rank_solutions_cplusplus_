@@ -1,15 +1,14 @@
 sample input: 
 ```
-3 1
-set 1 2
-get 1
-get 2
+30
 ```
 
 sample output:
 ```
-2
--1
+Value = 30
+A's func called 1 times 
+B's func called 1 times
+C's func called 1 times
 ```
 
 
